@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mods Minecraft 1.20.1 Forge</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #1a1d24;
+      --card-hover: #22262f;
+      --border: #2a2f3a;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --danger: #f85149;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(90deg, #58a6ff, #3fb950);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1f6feb33;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      margin-top: 0.8rem;
+      border: 1px solid #1f6feb55;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      padding-left: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .mod-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .mod-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .mod-card:hover {
+      background: var(--card-hover);
+      border-color: #3a4150;
+    }
+
+    .mod-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mod-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mod-file {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .links {
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-modrinth {
+      background: #1bd96a;
+      color: #0a0c0f;
+    }
+
+    .btn-curse {
+      background: #f16436;
+      color: #fff;
+    }
+
+    .btn-only {
+      background: #30363d;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .mod-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .links {
+        width: 100%;
+      }
+      .btn {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mods Minecraft 1.20.1</h1>
+      <p>Lista de mods Forge con enlaces oficiales de descarga</p>
+      <span class="badge">Forge 1.20.1</span>
+    </header>
+
+    <!-- Grupo 1 -->
+    <div class="section">
+      <div class="section-title">Grupo 1</div>
+      <div class="mod-list">
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Age of Weapons - Reforged</div>
+            <div class="mod-file">AgeOfWeapons - Reforged v.1.3.2c.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/age-of-weapons-reforged/version/v.1.3.2c" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/age-of-weapons" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Burnt</div>
+            <div class="mod-file">burnt-1.10.5.3-forge-1.20.1.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/burnt" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/burnt-basic" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Burnt Basic</div>
+            <div class="mod-file">burnt_basic-1.10.5.3-forge-1.20.1.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/burnt-basic" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Grupo 2 -->
+    <div class="section">
+      <div class="section-title">Grupo 2</div>
+      <div class="mod-list">
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Cloth Config API</div>
+            <div class="mod-file">cloth-config-11.1.136-forge.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/cloth-config/version/11.1.136+forge" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/cloth-config" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Collective</div>
+            <div class="mod-file">collective-1.20.1-8.74.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/collective" target="_blank">CurseForge</a>
+            <a class="btn btn-only" href="https://modrinth.com/mod/collective" target="_blank">Modrinth</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Corpse</div>
+            <div class="mod-file">corpse-forge-1.20.1-1.0.23.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/corpse/version/7fc0hJN6" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/corpse/files/7018272" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">GeckoLib</div>
+            <div class="mod-file">geckolib-forge-1.20.1-4.8.4.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/geckolib/files/8285794" target="_blank">CurseForge</a>
+            <a class="btn btn-only" href="https://modrinth.com/mod/geckolib" target="_blank">Modrinth</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Geophilic</div>
+            <div class="mod-file">Geophilic v3.7.mod.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/geophilic" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Geophilic Reforged</div>
+            <div class="mod-file">GeophilicReforged-v1.2.0.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/datapack/geophilic-reforged/version/VF0bzh6B" target="_blank">Modrinth</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">The Lost Cities</div>
+            <div class="mod-file">lostcities-1.20-7.5.7.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/the-lost-cities" target="_blank">CurseForge</a>
+            <a class="btn btn-only" href="https://modrinth.com/mod/the-lost-cities" target="_blank">Modrinth</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Majrusz Library</div>
+            <div class="mod-file">majrusz-library-forge-1.20.1-7.0.8.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/majrusz-library/version/BZzTRseC" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/majrusz-library/files/5302100" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Majrusz's Progressive Difficulty</div>
+            <div class="mod-file">majruszs-difficulty-forge-1.20.1-1.9.10.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/majruszs-progressive-difficulty" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/majruszs-progressive-difficulty" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Prefab</div>
+            <div class="mod-file">prefab-1.10.0.1.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/prefab/version/1.10.0.1" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/prefab" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Skyfall: Meteorites</div>
+            <div class="mod-file">skyfall-3.0.0-forge-1.20.1.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/skyfall-meteorites/version/3.0.0" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/skyfall-meteorites/files/6213069" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">TerraBlender</div>
+            <div class="mod-file">TerraBlender-forge-1.20.1-3.0.1.11.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-modrinth" href="https://modrinth.com/mod/terrablender" target="_blank">Modrinth</a>
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/terrablender" target="_blank">CurseForge</a>
+          </div>
+        </div>
+
+        <div class="mod-card">
+          <div class="mod-info">
+            <div class="mod-name">Village Spawn Point</div>
+            <div class="mod-file">villagespawnpoint-1.20.1-5.0.jar</div>
+          </div>
+          <div class="links">
+            <a class="btn btn-curse" href="https://www.curseforge.com/minecraft/mc-mods/village-spawn-point" target="_blank">CurseForge</a>
+            <a class="btn btn-only" href="https://modrinth.com/mod/village-spawn-point" target="_blank">Modrinth</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <p>Enlaces oficiales de <a href="https://modrinth.com" target="_blank">Modrinth</a> y <a href="https://www.curseforge.com" target="_blank">CurseForge</a></p>
+      <p style="margin-top:0.4rem">Minecraft 1.20.1 · Forge</p>
+    </footer>
+  </div>
+</body>
+</html>
